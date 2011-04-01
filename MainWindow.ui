@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>977</width>
+    <height>672</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="margin">
+     <number>4</number>
+    </property>
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <item row="0" column="0" rowspan="8">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="margin">
+        <number>1</number>
+       </property>
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="StructureView" name="wgGlView" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="wgCategoryLabel_1">
+      <property name="text">
+       <string>Object list</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QTreeWidget" name="wgObjectTree">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>160</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>160</height>
+       </size>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::ExtendedSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="indentation">
+       <number>16</number>
+      </property>
+      <property name="uniformRowHeights">
+       <bool>true</bool>
+      </property>
+      <property name="allColumnsShowFocus">
+       <bool>true</bool>
+      </property>
+      <property name="headerHidden">
+       <bool>true</bool>
+      </property>
+      <property name="columnCount">
+       <number>1</number>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">Model Objects</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="wgCategoryLabel_3">
+      <property name="text">
+       <string>Current object transformations</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QTreeWidget" name="wgTransformTree">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>120</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>120</height>
+       </size>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::ExtendedSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="horizontalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="indentation">
+       <number>16</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <attribute name="headerVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string notr="true">2</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="wgCategoryLabel_4">
+      <property name="text">
+       <string>Effect Parameters</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QStackedWidget" name="wgTransformParams">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="InvalidObjectParams"/>
+      <widget class="QWidget" name="RenderObjectParams"/>
+      <widget class="QWidget" name="PushMatrixParams"/>
+      <widget class="QWidget" name="PopMatrixParams"/>
+      <widget class="QWidget" name="LoadIdentityParams"/>
+      <widget class="QWidget" name="MakeArrayParams">
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>Repeat effects</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="wgMakeArray">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="RotationParams">
+       <layout class="QGridLayout" name="gridLayout_7">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_27">
+          <property name="text">
+           <string>Rotate around X by </string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="wgRotateX">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>°</string>
+          </property>
+          <property name="maximum">
+           <double>360.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_28">
+          <property name="text">
+           <string>Rotate around Y by </string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="wgRotateY">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>°</string>
+          </property>
+          <property name="maximum">
+           <double>360.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_29">
+          <property name="text">
+           <string>Rotate around Z by </string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="wgRotateZ">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>°</string>
+          </property>
+          <property name="maximum">
+           <double>360.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TranslateParams">
+       <layout class="QGridLayout" name="gridLayout_12">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_34">
+          <property name="text">
+           <string>Move along X axis</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="wgTranslateX">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_33">
+          <property name="text">
+           <string>Move along Y axis</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="wgTranslateY">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_35">
+          <property name="text">
+           <string>Move along Z axis</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="wgTranslateZ">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="ScaleParams">
+       <layout class="QGridLayout" name="gridLayout_11">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_30">
+          <property name="text">
+           <string>X Scale factor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="wgScaleX">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="wgScaleY">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="wgScaleZ">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_31">
+          <property name="text">
+           <string>Y Scale factor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_32">
+          <property name="text">
+           <string>Z Scale factor</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLabel" name="wgCategoryLabel_5">
+      <property name="text">
+       <string>Object Parameters</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QStackedWidget" name="wgObjectParams">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="EmptyPage">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>178</width>
+            <height>263</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="DirectoryParameters">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0">
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>178</width>
+            <height>263</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="WireParameters">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>X1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="wgWireX1">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>X2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QDoubleSpinBox" name="wgWireX2">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Y1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="wgWireY1">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Y2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QDoubleSpinBox" name="wgWireY2">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Z1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QDoubleSpinBox" name="wgWireZ1">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Z2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QDoubleSpinBox" name="wgWireZ2">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="4">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Wire radius</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QDoubleSpinBox" name="wgWireWR1">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>mm</string>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.500000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>R1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QDoubleSpinBox" name="wgWireWR2">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>mm</string>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.500000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>R2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="3">
+         <widget class="QSpinBox" name="wgWireSegm">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <number>32</number>
+          </property>
+          <property name="value">
+           <number>16</number>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="3">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Segments per turn</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="3">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Wire length (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="3">
+         <widget class="QDoubleSpinBox" name="wgWireLength">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="4">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Start/End coordinates</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" colspan="4">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>189</width>
+            <height>59</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="HelixParameters">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <property name="margin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0" colspan="4">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Start/End radius</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>R1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="wgHelixR1">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_25">
+          <property name="text">
+           <string>R2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QDoubleSpinBox" name="wgHelixR2">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>Helix Height (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QDoubleSpinBox" name="wgHelixHeight">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>m</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.010000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="3">
+         <widget class="QLabel" name="label_26">
+          <property name="text">
+           <string>Number of Turns</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QDoubleSpinBox" name="wgHelixTurns">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>-100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.010000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="4">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Wire radius</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>R1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QDoubleSpinBox" name="wgHelixWR1">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>mm</string>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.500000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>R2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QDoubleSpinBox" name="wgHelixWR2">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>mm</string>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.500000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="3">
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>Segments per turn</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="3">
+         <widget class="QSpinBox" name="wgHelixSegm">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <number>32</number>
+          </property>
+          <property name="value">
+           <number>16</number>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="4">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>189</width>
+            <height>87</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionDeleteObjects">
+   <property name="text">
+    <string>Delete objects</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>StructureView</class>
+   <extends>QWidget</extends>
+   <header>StructureView.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

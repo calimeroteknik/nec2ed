@@ -1,0 +1,41 @@
+#wgEffectTree, 
+#wgObjectTree, 
+#wgObjectParams, 
+#wgEffectParams, 
+QDoubleSpinBox,
+QSpinBox {
+ border: 1px solid gray;
+ border-radius: 3px;
+}
+
+#wgCategoryLabel_1,
+#wgCategoryLabel_2,
+#wgCategoryLabel_3,
+#wgCategoryLabel_4,
+#wgCategoryLabel_5 {
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+QSpinBox::up-button,
+QDoubleSpinBox::up-button {
+ subcontrol-origin: border;
+ subcontrol-position: right;
+ image: url(:/images/RightArrow.png);
+ padding-right: 2px;
+ width: 14px;
+ height: 14px;
+ border: none;
+}
+
+QSpinBox::down-button,
+QDoubleSpinBox::down-button {
+ subcontrol-origin: border;
+ subcontrol-position: left;
+ image: url(:/images/LeftArrow.png);
+ padding-left: 2px;
+ width: 14px;
+ height: 14px;
+ border: none;
+}
