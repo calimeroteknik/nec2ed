@@ -48,7 +48,7 @@ QList<QTreeWidgetItem *> LoadNecFile(Ui::MainWindow *ui, QString filename)
     return list;
 }
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QString filename, QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow)
 {
@@ -57,7 +57,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->wgGlView, SIGNAL(RenderRequested()), SLOT(RenderScene()));
     QObject::connect(ui->wgObjectTree, SIGNAL(itemSelectionChanged()), ui->wgGlView, SLOT(update()));
 
-    QList<QTreeWidgetItem *> l = LoadNecFile(ui, "C:\\747plane.nec");
+    QList<QTreeWidgetItem *> l = LoadNecFile(ui, filename);
     ui->wgObjectTree->insertTopLevelItems(0, l);
 }
 

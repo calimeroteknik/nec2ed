@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     cssString = cssFile.readAll();
     cssFile.close();
 
-    MainWindow w;
+    MainWindow w(argc > 1 ? argv[1] : "");
     w.setStyleSheet(cssString);
     w.show();
 
