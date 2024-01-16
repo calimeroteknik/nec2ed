@@ -1,5 +1,6 @@
 #include "StructureView.h"
 #include <math.h>
+#include <GL/glu.h>
 
 StructureView::StructureView(QWidget *parent) :
         QGLWidget(parent)

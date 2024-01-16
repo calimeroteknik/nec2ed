@@ -58,3 +58,5 @@ PRECOMPILED_HEADER = StructureView.h \
 
 RESOURCES += \
     Resources.qrc
+
+LIBS += -lGLU
